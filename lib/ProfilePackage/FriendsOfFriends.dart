@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:task_friends/Model/Operations.dart';
 import 'package:task_friends/Model/User.dart';
-
-import '../Operations.dart';
 
 class FriendOfFriends extends StatefulWidget {
   List<User> snapshot;
@@ -13,7 +12,7 @@ class FriendOfFriends extends StatefulWidget {
 }
 
 class _FriendOfFriendsState extends State<FriendOfFriends> {
-  Operations operations = new Operations();
+  SingletonOperations operations = SingletonOperations.getInstance();
   List<int> indexUser = new List();
   @override
   void initState() {

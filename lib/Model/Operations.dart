@@ -1,6 +1,17 @@
-import 'Model/User.dart';
+import 'User.dart';
 
-class Operations {
+class SingletonOperations {
+  static SingletonOperations instance = new SingletonOperations();
+
+  //make the constructor private so that this class cannot be
+  //instantiated
+  SingletonOperations() {}
+
+  //Get the only object available
+  static SingletonOperations getInstance() {
+    return instance;
+  }
+
   // ignore: non_constant_identifier_names, missing_return
   int searchById(List<User> user, int id) {
     for (int i = 0; i < user.length; i++) {
