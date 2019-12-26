@@ -5,7 +5,7 @@ import 'Model/User.dart';
 import 'network.dart';
 
 class MyHomePage extends StatefulWidget {
-  final List<User> country;
+  final List<UserSingleton> country;
   MyHomePage({Key key, this.country}) : super(key: key);
 
   @override

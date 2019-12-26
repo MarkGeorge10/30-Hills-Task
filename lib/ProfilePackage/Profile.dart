@@ -62,8 +62,8 @@ class _ProfileState extends State<Profile> {
   }
 
   // ignore: missing_return
-  Widget buildNavPage(String text, BuildContext context, List<User> snap,
-      List<dynamic> list, int ourUserID) {
+  Widget buildNavPage(String text, BuildContext context,
+      List<UserSingleton> snap, List<dynamic> list, int ourUserID) {
     if (text == "Friends") {
       return Friends(snap, list);
     } else if (text == "Friends Friends") {

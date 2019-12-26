@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:task_friends/Model/Operations.dart';
 import 'package:task_friends/Model/User.dart';
 
 // ignore: must_be_immutable
 class SuggestedFriends extends StatefulWidget {
-  List<User> snapshot;
-  User user;
+  List<UserSingleton> snapshot;
+  UserSingleton user;
   List<dynamic> list;
   int ourUserID;
   SuggestedFriends(this.snapshot, this.list, this.ourUserID);
@@ -14,7 +13,7 @@ class SuggestedFriends extends StatefulWidget {
 }
 
 class _SuggestedFriendsState extends State<SuggestedFriends> {
-  SingletonOperations operations = SingletonOperations.getInstance();
+  UserSingleton operations = UserSingleton.getInstance();
   List<int> indexUser = new List();
   @override
   void initState() {

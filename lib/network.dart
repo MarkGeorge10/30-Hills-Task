@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'Model/User.dart';
 
 class Network {
-  Future<List<User>> parseJosn() async {
+  Future<List<UserSingleton>> parseJosn() async {
     String response = await _loadAStudentAsset();
     if (response == null) {
       return null;
@@ -13,7 +13,9 @@ class Network {
     final parsed =
         json.decode(response.toString()).cast<Map<String, dynamic>>();
 
-    return parsed.map<User>((json) => new User.fromJson(json)).toList();
+    return parsed
+        .map<UserSingleton>((json) => new UserSingleton.fromJson(json))
+        .toList();
   }
 
   Future<String> _loadAStudentAsset() async {
